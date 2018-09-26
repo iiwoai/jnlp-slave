@@ -8,7 +8,7 @@ https://mirrors.aliyun.com/alpine/latest-stable/community\n'\
 > /etc/apk/repositories
 
 COPY pip-install.py /tmp/pip-install.py
-RUN apk add --update --no-cache docker curl python php7 php7-curl\
+RUN apk add --update --no-cache docker curl python php7 php7-curl php7-json\
   && mkdir /root/.kube \
   && python /tmp/pip-install.py \ 
   && pip install jinja2 \
